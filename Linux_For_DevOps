@@ -1,0 +1,432 @@
+1. DevOps:
+•	DevOps is a culture and set of practices that combine software development (Dev) and IT operations (Ops). The goal is to shorten the development lifecycle and provide continuous delivery of high-quality software by improving collaboration between development and operations teams. It emphasizes automation, monitoring, and collaboration.
+Sr. No.	Purpose	Tools
+1
+	Version Control Tools	GIT
+		SVN
+2	Continuous Integration (CI) / Continuous Delivery (CD) Tools	Jenkins
+		TeamCity
+3	Build Tools	Maven
+4	Configuration Management Tools	Ansible
+5	Containerization and Orchestration Tools	Docker
+		Kubernetes
+6	Infrastructure as Code (IaC) Tools	Terraform
+		AWS CloudFormation
+7	Cloud Platforms and Services	AWS
+
+2. SDLC (Software Development Life Cycle):
+•	SDLC is the process of planning, creating, testing, and deploying software. It outlines the steps involved in creating software, from the initial idea to the final product. It typically includes stages like planning, design, development, testing, deployment, and maintenance.
+ 
+3. Continuous Integration (CI):
+Continuous Integration (CI) is a practice where developers frequently merge their code changes into a central repository, usually multiple times a day. After each merge, automated tests are run to ensure that the new code doesn't break anything. This helps detect bugs early and improves the quality of the software. For example: In our project we used TeamCity for CI tool.
+4. IDE (Integrated Development Environment):
+•	IDE is a software application that provides a set of tools for developers to write, edit, debug, and test their code. It usually includes a code editor, a compiler or interpreter, a debugger, and other useful features. For Examples we  Visual Studio(AWS Environment) and Eclipse(Legacy Environment).
+5. Version Control:
+•	Version Control is a system that tracks changes to files over time. It allows developers to manage and record changes to their code so they can work together more effectively, track the history of their project, and revert to previous versions if needed. For example we used Git(AWS Environment) and SVN(Legacy Environment) for version control system.
+6. Build Tools:
+•	Build Tools are programs or scripts used to automate the process of compiling code, running tests, and creating executable files or packages. They help streamline the development process by automating repetitive tasks. For Examples include Maven is using in TeamCity.
+7. Software Repository:
+•	A Software Repository is a storage location for software packages or code. It's where developers store their code, dependencies, and libraries. A repository allows multiple developers to access, share, and contribute to the code. Popular repositories include GitHub(AWS Environment) and SVN(Legacy Environment).
+8. Continuous Integration Tool:
+•	A Continuous Integration Tool is a software application that automates the process of integrating code changes into a shared repository. It automatically builds and tests code after each change to ensure it works correctly. Popular CI tools include 
+9. Continuous Delivery (CD):
+•	Continuous Delivery (CD) is an extension of CI, where code changes are automatically built, tested, and prepared for release. The key idea is that the software is always in a state that could be released to production, allowing for faster, more reliable releases. For example: In our project we used TeamCity for CD tool.
+10. Deployment:
+•	Deployment is the process of moving code or software from a development environment to a live or production environment where users can access and use it. It could involve installing software on servers, configuring databases, or releasing updates to a website or app. Usually done by OPS team.
+11. Automation Tools:
+•	Automation Tools are software programs that help automate repetitive tasks in software development, testing, deployment, and infrastructure management. They save time and reduce errors. Examples include Ansible and TeamCity which help automate server configuration and management.
+
+AWS Account Setup:
+1. AWS Account Setup:
+•	What it is: This is the process of creating an account on Amazon Web Services (AWS), which allows you to access all of AWS's cloud computing resources and services.
+•	Why it matters: You need an AWS account to use AWS services like storing data, running websites, etc.
+2. AWS Certificate Manager:
+•	What it is: This is a tool to manage SSL/TLS certificates, which are used to secure data between your website and users (like showing a "https://" at the start of the web address).
+•	Why it matters: It helps you protect your data by ensuring that the communication between your users and your website is encrypted and secure.
+3. IAM (Identity and Access Management):
+•	What it is: IAM is a service that helps you control who can access your AWS resources. You can create users and assign specific permissions (like read-only or full access) to them.
+•	Why it matters: It helps keep your AWS resources safe by making sure only the right people or systems can access certain things.
+4. CloudWatch:
+•	What it is: CloudWatch is a service that monitors your AWS resources (like EC2 instances, databases, etc.) and applications. It collects logs and metrics (like CPU usage, storage space) and sends you alerts when something goes wrong.
+•	Why it matters: It helps you track the performance and health of your applications and systems, so you can fix issues quickly.
+5. EC2 (Elastic Compute Cloud):
+•	What it is: EC2 lets you run virtual computers (called instances) in the cloud. You can choose the size and type of virtual machine based on your needs.
+•	Why it matters: It gives you the power to run websites, applications, or other services on virtual machines without needing physical hardware.
+6. Billing and Cost Management:
+•	What it is: This service helps you manage and track how much you’re spending on AWS services. It provides tools to set budgets, view usage reports, and estimate costs.
+•	Why it matters: It helps you keep track of your spending on AWS so you don’t get surprised by high bills and can optimize your usage to save money.
+In short:
+•	Account Setup is creating your AWS account.
+•	Certificate Manager keeps data secure.
+•	IAM manages who can access your services.
+•	CloudWatch helps monitor and alert you about your resources.
+•	EC2 provides virtual servers to run applications.
+•	Billing and Cost Management helps you track and control your spending on AWS.
+
+Accounts Login: Totally@007
+Dockerhub: yashvantr0426@gmail.com
+SonarQube: yashvantr0426@gmail.com
+Git: yashvantr0426@gmail.com
+AWS:  yr.pr143@gmail.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Linux:
+Open Source or Open Source Kernal: A kernel that is open source allows users and developers to view, modify, and distribute its source code.
+Why Linux for DevOps?
+ Stability, Cost-effective, Customizability. Tooling Security and Compatibility
+RPM based Linux: RPM (Red Hat Package Manager) is a package management system used by Red Hat-based distributions, such as RHEL (Red Hat Enterprise Linux), CentOS, and Fedora.
+Debian Based Linux: Debian-based Linux distributions include Ubuntu, Debian, Linux Mint, and others.
+What is the pursuit of RPM based and Debian based linux used in industry?
+ RPM-based Linux (e.g., RHEL, CentOS, Fedora) is commonly used in enterprises that need stable, well-supported environments, especially in server environments.
+Debian-based distro is highly favoured in cloud and containerized environments, especially for development, CI/CD, and DevOps.
+Directories in Linux:
+/bin: Contains essential binary executable files.
+/etc: Configuration files for system settings.
+/var: Stores variable data like logs, databases, and application data.
+/tmp: Temporary files created by applications.
+/usr: Contains user-related programs and data.
+Relative Path: A relative path specifies the location of a file or directory in relation to the current working directory.
+Absolute Path: An absolute path specifies the complete path from the root directory to the file or directory
+Wildcard Character: Wildcard characters are used in Linux commands to represent one or more characters in file names. Common wildcard characters include:
+•	*  Matches zero or more characters.
+o	Example: *.txt matches all .txt files in the current directory.
+•	?  Matches exactly one character.
+o	Example: file?.txt matches file1.txt, file2.txt, etc.
+•	[]  Matches any one character within the brackets.
+o	Example: file[1-3].txt matches file1.txt, file2.txt, and file3.txt.
+
+
+VIM editor: It is widely used for editing configuration files, coding, and other text-based tasks.
+VIM editor’s modes: VIM operates in different modes:
+1.	Normal Mode: The default mode for navigation and manipulation. You can use keyboard shortcuts for commands like delete (d), copy (y), paste (p), and navigation (h, j, k, l).
+2.	Insert Mode: Used for entering text. You enter insert mode by pressing i in normal mode, and you can exit it by pressing Esc.
+3.	Visual Mode: Allows you to select text. You can enter visual mode by pressing v in normal mode.
+4.	Command-Line Mode: Allows you to run commands like saving, quitting, or searching. You can enter command-line mode by pressing “:” in normal mode.
+
+Here is a simplified and more readable version of the VIM editor commands and their explanations:
+Basic Commands in VIM:
+•	i: Enter Insert Mode to start writing in a new or existing file.
+•	o: Open a new line below the current line and enter Insert Mode.
+Extended Mode Commands:
+•	se nu: Enable line numbers for the open file.
+•	Shift + G or G: Move the cursor to the last line of the file.
+•	gg: Move the cursor to the first line of the file.
+Copy, Paste, and Delete Commands:
+•	yy: Copy the current line where the cursor is located.
+o	nyy: Copy n lines (e.g., 3yy will copy 3 lines).
+•	p: Paste the copied content below the current line.
+o	np: Paste the content n times (e.g., 3p will paste 3 times).
+•	P: Paste the copied content above the current line.
+•	dd: Delete the current line.
+o	ndd: Delete n lines (e.g., 3dd will delete 3 lines).
+Undo and Search/Replace Commands:
+•	u: Undo the last change.
+•	:%s/content_to_search/content_to_replace/: Search and replace content in the file, line by line (similar to Ctrl + H in Windows).
+o	For example, :%s/old/new/ will replace "old" with "new" in each line.
+•	:%s/content_to_search/content_to_replace/g: Search and replace content globally throughout the entire file (not just line-by-line).
+Summary:
+•	Use Insert Mode (i, o) to write.
+•	Use Extended Commands (like se nu, gg, G) to navigate and modify the file.
+•	Use commands like yy, dd, p, and P to copy, delete, and paste text.
+•	Use u to undo and :%s to search and replace text in the file.
+By learning these commands, you'll become more efficient in using VIM for editing files!
+
+Types of Files:
+Type	Description	Example
+Regular File	Stores data (text, binary, etc.)	/home/user/file.txt
+Directory	Stores references to files and other directories	/home/user/
+Symbolic Link	Points to another file or directory	/usr/bin/python
+Hard Link	Another name for an existing file	ln file1.txt file2.txt
+Character Device	Device file for character based I/O	/dev/tty1
+Block Device	Device file for block-based I/O (storage)	/dev/sda
+FIFO	File for inter-process communication	/tmp/myfifo
+Socket	File for network communication or IPC	/var/run/docker.sock
+
+Soft linked file purpose.
+ Soft links provide a way to create shortcuts to files or directories, facilitating easier access, file management, and system administration
+SYNTAX: ln -s /path/to/original/file /path/to/link
+
+
+
+
+
+
+
+Filters in Linux:
+In Linux, filters are command’s that process text data in a pipeline and produce an output. Filters allow you to manipulate or format data before sending it to the next command or output. Filters are generally used to process or filter the content of files or streams.
+Here are some common filters in Linux:
+1. cat (Concatenate)
+•	Purpose: Displays the content of files.
+•	Usage: 
+•	cat filename
+•	Example: Display the content of a file: 
+•	cat file.txt
+2. grep (Global Regular Expression Print)
+•	Purpose: Searches for text patterns in files or input.
+•	Usage: 
+•	grep pattern filename
+•	Example: Find lines containing the word "apple" in a file: 
+•	grep "apple" file.txt
+3. sort
+•	Purpose: Sorts lines of text alphabetically or numerically.
+•	Usage: 
+•	sort filename
+•	Example: Sort lines of a file alphabetically: 
+•	sort file.txt
+4. uniq
+•	Purpose: Removes duplicate lines from a sorted file or input.
+•	Usage: 
+•	uniq filename
+•	Example: Remove duplicate lines from a file (the file must be sorted first): 
+•	sort file.txt | uniq
+5. wc (Word Count)
+•	Purpose: Counts the number of lines, words, and characters in a file.
+•	Usage: 
+•	wc filename
+•	Example: Count lines, words, and characters in a file: 
+•	wc file.txt
+6. cut
+•	Purpose: Extracts sections from each line of a file (typically columns of text).
+•	Usage: 
+•	cut -d 'delimiter' -f field_number filename
+•	Example: Extract the first column of a comma-separated file: 
+•	cut -d ',' -f 1 file.csv
+7. awk
+•	Purpose: A powerful programming language for text processing. It can manipulate data in a file based on patterns and actions.
+•	Usage: 
+•	awk '{print $1}' filename
+•	Example: Print the first column of a file: 
+•	awk '{print $1}' file.txt
+8. sed (Stream Editor)
+•	Purpose: A stream editor for filtering and transforming text in a file or input stream.
+•	Usage: 
+•	sed 's/old/new/' filename
+•	Example: Replace "apple" with "orange" in a file: 
+•	sed 's/apple/orange/' file.txt
+9. tr (Translate or Delete Characters)
+•	Purpose: Translates or deletes characters in the input stream.
+•	Usage: 
+•	tr 'old_char' 'new_char'
+•	Example: Replace all lowercase letters with uppercase: 
+•	echo "hello" | tr 'a-z' 'A-Z'
+10. tee
+•	Purpose: Reads from standard input and writes to standard output and files at the same time.
+•	Usage: 
+•	command | tee filename
+•	Example: Display output on the screen and save it to a file: 
+•	ls | tee output.txt
+11. head
+•	Purpose: Displays the first few lines of a file (default is 10 lines).
+•	Usage: 
+•	head filename
+•	Example: Display the first 5 lines of a file: 
+•	head -n 5 file.txt
+12. tail
+•	Purpose: Displays the last few lines of a file (default is 10 lines).
+•	Usage: 
+•	tail filename
+•	Example: Display the last 5 lines of a file: 
+•	tail -n 5 file.txt
+13. find
+•	Purpose: Searches for files and directories in a directory hierarchy based on various criteria.
+•	Usage: 
+•	find /path/to/search -name "filename"
+•	Example: Find all .txt files in the current directory: 
+•	find . -name "*.txt"
+14. xargs
+•	Purpose: Builds and executes command lines from standard input.
+•	Usage: 
+•	command | xargs other_command
+•	Example: Delete files listed in a text file: 
+•	cat filelist.txt | xargs rm
+15. diff
+•	Purpose: Compares the contents of two files line by line and displays the differences.
+•	Usage: 
+•	diff file1.txt file2.txt
+•	Example: Compare two text files: 
+•	diff file1.txt file2.txt
+Using Filters in a Pipeline:
+Filters are commonly used together in a pipeline, where the output of one command is passed as input to the next. For example:
+cat file.txt | grep "apple" | sort | uniq
+This example:
+1.	Displays the contents of file.txt using cat.
+2.	Searches for lines containing "apple" using grep.
+3.	Sorts the results with sort.
+4.	Removes duplicates with uniq.
+Summary:
+Filters in Linux are tools that allow you to manipulate and process text data. They can be combined in pipelines to perform complex data transformations, making them essential for tasks like searching, sorting, editing, and formatting text.
+
+Input redirection: 
+Input Redirection uses the < operator to provide input to commands from a file instead of from the keyboard. It’s commonly used for automating processes, working with large files, or running commands non-interactively.
+
+Operator	Description	Example Usage
+>	Overwrites the file with the command output	echo "Hello" > file.txt
+>>	Appends the command output to the file	echo "Hello again" >> file.txt
+2>>	Appends error messages (stderr) to the file	command 2>> file.txt
+&>>	Appends both output and error messages to the file	command &>> file.txt
+
+
+
+
+Explanation Of the commands:
+Explanation of Commands:
+1. cut -d: -f1 filename.txt
+•	Purpose: This command is used to extract specific columns from a text file. It works by splitting each line of the file based on a delimiter (in this case, the colon :) and then selecting the desired field.
+•	Command Breakdown:
+o	cut: The command used to extract sections (fields) from a line of text.
+o	-d:: The delimiter : (colon) is specified. This means cut will split each line based on the colon character.
+o	-f1: Selects the first field (column) from the line after splitting by the colon delimiter.
+o	filename.txt: The file from which the data is extracted.
+•	Example: If filename.txt contains the following lines:
+•	user1:password1
+•	user2:password2
+•	user3:password3
+The command cut -d: -f1 filename.txt will output:
+user1
+user2
+user3
+•	Note:
+o	For the cut command to work correctly, the file must have a proper delimiter (in this case, :). If the delimiter is inconsistent, you may need to use awk, which is more flexible.
+2. top
+•	Purpose: The top command provides a real-time, dynamic view of the system's performance. It shows system uptime, load averages, and task information.
+•	Command Breakdown:
+o	top: Runs the top command, which displays a live updating list of system processes and system performance metrics.
+•	Output Breakdown:
+o	System uptime: The time the system has been running since the last reboot.
+o	Load average: Shows the system load averages over three time intervals — 1 minute, 5 minutes, and 15 minutes.
+o	Tasks: Displays the number of processes in different states: 
+	Total: The total number of processes.
+	Running: The number of processes currently running.
+	Sleeping: The number of processes that are idle and waiting for something to happen.
+	Stopped: The number of processes that are stopped.
+	Zombie: The number of processes that have finished execution but are still in the process table (waiting for the parent to collect exit information).
+•	Example Output:
+•	top - 15:30:22 up 2 days,  3:41,  1 user,  load average: 0.16, 0.24, 0.23
+•	Tasks: 130 total, 1 running, 129 sleeping, 0 stopped, 0 zombie
+3. tar -czvf filename filepath
+•	Purpose: The tar command is used to create compressed archive files. This command specifically creates a gzip-compressed archive.
+•	Command Breakdown:
+o	tar: The command used to manipulate archive files (create, extract, list, etc.).
+o	-c: Create a new archive.
+o	-z: Compress the archive using gzip.
+o	-v: Verbose mode, which shows the files being processed.
+o	-f filename: Specifies the name of the archive file to be created (e.g., filename.tar.gz).
+o	filepath: The path of the directory or files to include in the archive.
+•	Example: To create a compressed archive of the folder directory and name it folder.tar.gz:
+•	tar -czvf folder.tar.gz folder
+This command creates a folder.tar.gz archive of the folder directory.
+4. tar -xzvf filename -C filepath
+•	Purpose: This command is used to extract a compressed archive (.tar.gz or .tgz file) into a specified directory.
+•	Command Breakdown:
+o	tar: The command used to manipulate archive files.
+o	-x: Extract the contents of an archive.
+o	-z: Decompress the archive using gzip.
+o	-v: Verbose mode, shows the files being extracted.
+o	-f filename: Specifies the name of the archive to be extracted (e.g., filename.tar.gz).
+o	-C filepath: Extract the files to a specific directory (filepath).
+•	Example: To extract the folder.tar.gz archive into the /home/user/ directory:
+•	tar -xzvf folder.tar.gz -C /home/user/
+This command will extract the contents of folder.tar.gz into /home/user/.
+________________________________________
+Summary of the Commands:
+Command	Purpose	Example Usage
+cut -d: -f1 filename.txt	Extract the first field from a file, using : as the delimiter	cut -d: -f1 filename.txt
+top	Display real-time system performance (uptime, load average, tasks)	top
+tar -czvf filename filepath	Create a compressed archive using gzip	tar -czvf archive.tar.gz /path/to/files
+tar -xzvf filename -C filepath	Extract a compressed archive to a specified directory	tar -xzvf archive.tar.gz -C /home/user/
+Notes:
+•	cut: The delimiter is critical. If the delimiter is not consistent, use awk, which can handle more complex scenarios.
+•	top: It's a useful tool for monitoring system performance in real-time.
+•	tar: This command is commonly used for creating and extracting archives, especially for backup and transferring files across systems.
+
+
+
+
+
+
+
+Users and Groups:
+Concept	Description
+Users	Individual accounts with unique user names, each assigned a UID.
+Groups	Collections of users for the purpose of sharing access to resources.
+Primary Group	The default group for a user (usually created when the user is created).
+Secondary Group	Additional groups a user belongs to, enabling access to resources assigned to those groups.
+UID/GID	Unique identifiers for users (UID) and groups (GID) that are used by the system for file management.
+Permissions	Control who can read, write, or execute a file based on the owner, group, and others.
+
+File Permissions:
+Types of Permissions:
+Read (r): Allows the user to read the contents of a file or list the contents of a directory. Value: 4
+Write (w): Allows the user to modify the contents of a file or add/remove files in a directory. Value: 2
+Execute (x): Allows the user to execute a file (run it as a program) or enter a directory. Value: 1
+________________________________________
+Understanding the File Permission Format
+The format looks like this:
+-rwxr-xr-x
+Here’s how to break it down:
+File Type (1st character):
+•	The first character represents the type of file: 
+o	-: Regular file
+o	d: Directory
+o	l: Symbolic link
+o	c: Character device file
+o	b: Block device file
+Permissions for Owner, Group, and Others (Next 9 characters):
+•	The next 9 characters are split into 3 groups of 3 characters each: 
+o	Owner (User) permissions: First 3 characters
+o	Group permissions: Next 3 characters
+o	Others permissions: Last 3 characters
+Each set of 3 characters represents read (r), write (w), and execute (x) permissions.
+Changing File Permissions
+You can modify file permissions using the chmod command. Permissions can be set using either symbolic or numeric modes.
+Symbolic Mode:
+•	Syntax: chmod [who][operation][permissions] file
+o	Who: 
+	u: User (owner)
+	g: Group
+	o: Others
+	a: All (user, group, others)
+o	Operation: 
+	+: Add permission
+	-: Remove permission
+	=: Set exact permission
+Numeric Mode:
+•	Syntax: chmod [permissions] file
+________________________________________
+Sudo: Sudo allows users to run commands with superuser privileges, making it a powerful tool for system administrators.
+Processes:
+Zombie Process: A process that has finished execution but still remains in the process table because the parent hasn't read its exit status yet.
+PID (Process ID): A unique identifier for each running process in the system.
+PPID (Parent Process ID): The process ID of the parent process that spawned the current process.
+Orphan Process: A process whose parent has terminated, and it is now adopted by the init process (PID 1).
+
+Commands:
+Sr. No	Command	Purpose
+1	touch filename{1..10}.txt 	It will create 10 empty file
+2	cp -r dir1 dir2	Copy dir1 to dir2
+3	file filename.txt	File information
+4	grep -iR *	It will check file and  sub directory both in the dirctory
+5	grep -v content filename	Reverse search and you will not see the content you have mention
+6	cut -d: -f1 filename.txt	It will cut down the 1 column of the file
+7	sed ‘s/ content_to_search/content_to_replace/g’ filename.txt
+	It will show what will be the result after changing the word
+8	sed -i ‘s/ content_to_search/content_to_replace/g’ filename.txt
+	It will change the word in the file
+9	\	This will be used when you want to used the command in two lines
+		

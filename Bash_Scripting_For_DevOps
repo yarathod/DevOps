@@ -1,0 +1,189 @@
+BASH Scripting
+Here’s a simple explanation for each of the terms and concepts in Bash scripting:
+________________________________________
+1. Shebang Character
+Shebang is the character sequence #! used at the start of a script file to specify the path to the interpreter that should be used to run the script. It's followed by the absolute path to the shell or interpreter.
+•	Example: 
+•	#!/bin/bash
+This tells the system to use the bash shell to interpret and run the script.
+________________________________________
+2. Variables
+In Bash scripting, variables are used to store data (such as strings, numbers, etc.) that can be used later in the script.
+•	Assigning a variable:
+•	my_variable="Hello World"
+•	Accessing a variable:
+•	echo $my_variable
+________________________________________
+3. Arguments
+Arguments are values or parameters passed to a script or function when it's run. These are accessed using $1, $2, $3, etc.
+•	Example:
+•	#!/bin/bash
+•	echo "First argument: $1"
+•	echo "Second argument: $2"
+•	Running the script with arguments:
+•	./myscript.sh arg1 arg2
+________________________________________
+4. Is There Any Limit for Arguments?
+There is a limit, but it's generally very large. The maximum number of arguments a script can receive depends on the system's limits (usually governed by the kernel's ARG_MAX value). For most systems, this limit is very high (several thousand arguments).
+________________________________________
+5. Difference Between Single Quote (') and Double Quote (")
+•	Single Quote ('): Anything inside single quotes is treated as a literal string (no variable expansion or special characters are interpreted).
+o	Example: 
+o	var='Hello $USER'
+o	echo $var  # Output: Hello $USER
+•	Double Quote ("): Inside double quotes, variables and commands will be expanded.
+o	Example: 
+o	var="Hello $USER"
+o	echo $var  # Output: Hello username (where username is the current user's name)
+________________________________________
+6. Where \ is Used in Scripting?
+The backslash (\) is used as an escape character in Bash. It allows you to escape characters that otherwise have special meaning, such as spaces, quotes, or newlines.
+•	Example: 
+•	echo "This is a backslash: \\"
+It’s also used for breaking long commands across multiple lines for readability:
+echo "This is a long command that \
+spans across two lines."
+________________________________________
+7. Backticks in Substitution of Command
+Backticks (`) are used for command substitution in Bash. This allows you to use the output of one command as the input for another.
+•	Example: 
+•	current_date=`date`
+•	echo "Today's date is: $current_date"
+Note: It's recommended to use $(...) instead of backticks for better readability:
+current_date=$(date)
+________________________________________
+8. Exporting Variables
+The export command is used to make a variable available to child processes. By default, variables are only available within the script where they are declared. To make a variable accessible to other scripts or programs, use export.
+•	Example: 
+•	export my_var="Hello"
+This allows other scripts or commands to access the value of my_var.
+________________________________________
+9. .bashrc File
+The .bashrc file is a configuration file that is executed each time a new terminal session is started in Bash. It is used to set environment variables, create aliases, or set up other preferences for the user’s shell.
+•	Example: You might add custom prompt settings or environment variables in .bashrc: 
+•	export PATH=$PATH:/new/path
+The .bashrc file is typically located in your home directory (~/.bashrc).
+________________________________________
+10. User Input Variables
+You can take input from the user using the read command. This command allows you to assign user input to a variable.
+•	Example: 
+•	echo "Enter your name: "
+•	read name
+•	echo "Hello, $name!"
+________________________________________
+11. -gt Operator
+The -gt (greater than) operator is used to compare two numbers in conditional statements. It returns true if the first number is greater than the second.
+•	Example: 
+•	if [ $num1 -gt $num2 ]; then
+•	  echo "$num1 is greater than $num2"
+•	fi
+________________________________________
+12. If, Else, Fi Statement
+The if statement in Bash is used for conditional execution. The else statement is used to execute a block of commands when the condition in if is false. The fi keyword is used to close the if block.
+•	Example: 
+•	if [ $num -gt 10 ]; then
+•	  echo "Number is greater than 10"
+•	else
+•	  echo "Number is less than or equal to 10"
+•	fi
+________________________________________
+13. -eq Operator
+The -eq (equal) operator is used to compare two numbers and returns true if they are equal.
+•	Example: 
+•	if [ $num1 -eq $num2 ]; then
+•	  echo "Numbers are equal"
+•	fi
+________________________________________
+Summary of Operators:
+•	-gt: Greater than (e.g., $num1 -gt $num2)
+•	-eq: Equal to (e.g., $num1 -eq $num2)
+•	-lt: Less than (e.g., $num1 -lt $num2)
+•	-ne: Not equal (e.g., $num1 -ne $num2)
+•	-ge: Greater than or equal to (e.g., $num1 -ge $num2)
+•	-le: Less than or equal to (e.g., $num1 -le $num2)
+These operators are typically used in if statements to compare values.
+________________________________________
+Conclusion
+These are the basic Bash scripting concepts and commands you will frequently encounter. They help you manage variables, input/output, conditional logic, and script execution efficiently.
+1. if, elif, else, and fi Statement in Bash
+The if, elif, else, and fi are used to perform conditional tests and execute code based on the outcome of those tests. This is a fundamental concept in Bash scripting for making decisions.
+•	if: Starts the conditional test.
+•	elif: (Optional) Stands for "else if." It allows you to test multiple conditions.
+•	else: (Optional) Executes when none of the conditions in if or elif are true.
+•	fi: Ends the if block (it's "if" reversed).
+Basic Syntax of if, elif, else, fi:
+if [ condition ]; then
+  # Code to execute if the condition is true
+elif [ another_condition ]; then
+  # Code to execute if the second condition is true
+else
+  # Code to execute if none of the conditions are true
+fi
+Example:
+#!/bin/bash
+
+# Read user input
+echo "Enter a number: "
+read number
+
+if [ $number -gt 10 ]; then
+  echo "The number is greater than 10."
+elif [ $number -eq 10 ]; then
+  echo "The number is equal to 10."
+else
+  echo "The number is less than 10."
+fi
+Explanation:
+•	if [ $number -gt 10 ]: Checks if the number is greater than 10.
+•	elif [ $number -eq 10 ]: Checks if the number is equal to 10.
+•	else: If neither condition is true, this block will execute.
+•	fi: Marks the end of the conditional block.
+________________________________________
+2. System Variables in Bash
+System variables (also called environment variables) are predefined variables in Linux/Unix systems that provide information about the system and its environment. These variables are set by the system or by the user and can be accessed and used in scripts or commands.
+Common System Variables:
+•	$HOME: Represents the home directory of the current user.
+o	Example: 
+o	echo $HOME  # Output: /home/username
+•	$USER: Stores the username of the current user.
+o	Example: 
+o	echo $USER  # Output: username
+•	$PATH: Stores a list of directories where executable programs are located. When you type a command, the system checks these directories to find the corresponding executable.
+o	Example: 
+o	echo $PATH  # Output: /usr/local/bin:/usr/bin:/bin
+•	$PWD: Represents the current working directory.
+o	Example: 
+o	echo $PWD  # Output: /home/username/Documents
+•	$SHELL: Stores the path to the current shell being used (e.g., /bin/bash).
+o	Example: 
+o	echo $SHELL  # Output: /bin/bash
+•	$UID: The user ID of the current user.
+o	Example: 
+o	echo $UID  # Output: 1001
+•	$RANDOM: A variable that gives a random number each time it's accessed.
+o	Example: 
+o	echo $RANDOM  # Output: A random number between 0 and 32767
+•	$?: The exit status of the last executed command. A value of 0 means success, and non-zero means an error.
+o	Example: 
+o	ls
+o	echo $?  # Output: 0 (if ls was successful)
+•	$#: The number of arguments passed to a script.
+o	Example: 
+o	echo $#
+•	$@: All arguments passed to a script as a list.
+o	Example: 
+o	echo $@
+•	$0: The name of the script itself.
+o	Example: 
+o	echo $0  # Output: script_name.sh
+•	$1, $2, ..., $n: These represent the arguments passed to a script or function. $1 is the first argument, $2 is the second, and so on.
+o	Example: 
+o	echo $1  # Output: First argument passed to the script
+________________________________________
+Summary
+•	if, elif, else, fi: Used to execute commands based on conditions.
+•	System variables: Provide system or user-related information and are accessed with $ (e.g., $HOME, $USER, $PAT
+
+Crontab:
+Do statement:
+While statement:
